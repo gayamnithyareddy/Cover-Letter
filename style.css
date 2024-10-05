@@ -1,0 +1,181 @@
+/* Black background and basic styling */
+body {
+  background-color: black;
+  overflow: hidden;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  perspective: 1000px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container for text and characters */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* 3D text styling with more glowing effects and animations */
+.three-d {
+  font-size: 7rem;
+  font-weight: bold;
+  color: white; /* Changed to white */
+  position: relative;
+  display: inline-block;
+  transform-style: preserve-3d;
+  perspective: 800px;
+  letter-spacing: 10px;
+  animation: bounceRotate 2s ease-in-out infinite;
+  text-shadow: 0 0 30px white, 0 0 60px rgba(255, 255, 255, 0.8), 0 0 100px rgba(255, 255, 255, 0.5); /* Changed shadow color to white */
+  border: 5px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Changed shadow color to white */
+}
+
+/* Glowing gradient border */
+.three-d:hover {
+  border-image: linear-gradient(45deg, white, #ff4ecd, #ffdf00) 1; /* Changed the first color to white */
+  transform: scale(1.2);
+  text-shadow: 0 0 50px #ffdf00, 0 0 100px #ff4ecd;
+}
+
+/* Bounce and rotate animation */
+@keyframes bounceRotate {
+  0%, 100% {
+      transform: translateY(0) rotateY(0deg);
+  }
+  50% {
+      transform: translateY(-20px) rotateY(360deg);
+  }
+}
+
+/* Status text styling */
+.status {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-top: 20px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Hire Me Section Styling */
+.hire-me {
+  margin-top: 40px;
+  color: #ffffff; /* Keep it white */
+  font-size: 1.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.hire-me h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hire-me a {
+  margin-top: 15px;
+}
+
+/* Background gradient with animated particles */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(50, 50, 50, 0.8)), url('https://cdn.jsdelivr.net/gh/kmlcf1993/particles@master/particles.svg');
+  background-size: cover;
+  opacity: 0.5;
+  animation: moveParticles 30s linear infinite;
+}
+
+/* Particle animation */
+@keyframes moveParticles {
+  0% {
+      transform: translateY(0) translateX(0);
+  }
+  50% {
+      transform: translateY(20px) translateX(-20px);
+  }
+  100% {
+      transform: translateY(0) translateX(0);
+  }
+}
+
+/* Hire Me Section styling */
+.hire-me {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  color: white; /* White text color */
+  padding: 20px; /* Padding inside the box */
+  border-radius: 10px; /* Rounded corners for the box */
+  box-shadow: 
+      0 0 10px rgba(255, 215, 0, 0.5), /* Gold glow */
+      0 0 20px rgba(255, 215, 0, 0.7), /* Brighter gold glow */
+      0 0 30px rgba(255, 215, 0, 0.9); /* Strong gold glow */
+  opacity: 0; /* Start invisible */
+  transform: translateY(20px); /* Start slightly below */
+  animation: fadeInUp 1s forwards; /* Add animation */
+}
+
+/* Fade in and slide up animation for Hire Me section */
+@keyframes fadeInUp {
+  from {
+      opacity: 0; /* Start invisible */
+      transform: translateY(20px); /* Start slightly below */
+  }
+  to {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* End at original position */
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .three-d {
+      font-size: 4rem;
+  }
+  .status {
+      font-size: 1.5rem; /* Smaller status size for mobile */
+  }
+  .hire-me {
+      font-size: 1.2rem; /* Adjust hire me text size for mobile */
+      padding: 15px;
+  }
+  .hire-me h2 {
+      font-size: 2rem; /* Adjust header size for mobile */
+  }
+}
+
+
+.lime-text {
+  color: lime; /* Lime color */
+}
+
+/* Hire Me Section styling */
+.hire-me {
+  background-color: #000000; /* Pure black background */
+  color: white; /* White text color */
+  padding: 20px; /* Padding inside the box */
+  border-radius: 10px; /* Rounded corners for the box */
+  box-shadow: 
+      0 0 10px rgba(255, 215, 0, 0.5), /* Gold glow */
+      0 0 20px rgba(255, 215, 0, 0.7), /* Brighter gold glow */
+      0 0 30px rgba(255, 215, 0, 0.9); /* Strong gold glow */
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Start at original position */
+  animation: fadeInUp 1s forwards; /* Add animation */
+}
+
+
+
+
+
+
+
